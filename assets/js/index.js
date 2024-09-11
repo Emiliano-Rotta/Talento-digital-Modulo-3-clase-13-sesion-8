@@ -83,3 +83,33 @@ console.log(semasforo(red))
 console.log(semasforo(yellow))
 console.log(semasforo(green))
 console.log(semasforo(apple))
+
+
+// Ejercicio 1: Propiedades privadas con Symbol
+// Consigna:
+
+// Crea un objeto auto que tenga las propiedades marca, modelo y una propiedad privada llamada númeroDeSerie usando un Symbol. Luego, escribe un código que imprima solo la marca y el modelo del auto, sin revelar el número de serie. Finalmente, muestra cómo acceder al número de serie utilizando el Symbol.
+
+//ayuda: const numeroDeSerie = Symbol('númeroDeSerie');
+
+
+
+// Ejercicio 2: Evitar colisiones de nombres de propiedades con Symbol
+// Consigna:
+
+// Imagina que tienes dos desarrolladores trabajando en un proyecto, y ambos deben agregar propiedades al mismo objeto usuario. Cada desarrollador crea un módulo que añade una propiedad a este objeto. Ambos desarrolladores deciden usar el mismo nombre de propiedad en sus módulos, pero para evitar colisiones (conflictos de nombres) entre las propiedades, usan Symbol para hacer que sus propiedades sean únicas, incluso si tienen el mismo nombre.
+
+// Tu tarea es:
+
+// Crear dos Symbol, uno para cada módulo.
+// Crear un objeto usuario que contenga una propiedad para cada Symbol.
+// Mostrar cómo acceder a las propiedades agregadas por cada módulo.
+// Verificar que las propiedades son únicas y no colisionan.
+
+// un programador mod 1 -->
+// un programador mod 2 -->
+
+// const usuario = {
+//     nombre: "Ghiselle"
+
+// }
