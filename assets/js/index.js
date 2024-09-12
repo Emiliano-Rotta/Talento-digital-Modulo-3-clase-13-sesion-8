@@ -185,18 +185,29 @@
 
 // Consigna: Crea un objeto libro con las propiedades titulo y autor. Utiliza un Proxy para interceptar el acceso a propiedades que no existen en el objeto y devuelve un mensaje personalizado cuando esto ocurra.
 
-const libro = {
-    titulo: "Perelandra",
-    autor: "C.S.Lewis"
-}
+// const libro = {
+//     titulo: "Perelandra",
+//     autor: "C.S.Lewis"
+// }
 
-const objetoQueEnvuelveHandler = {
-    get(target, property){
-        return property in target ? target[property] : `La propiedad ${property} no existe`
-    }
-}
+// const objetoQueEnvuelveHandler = {
+//     get(target, property){
+//         return property in target ? target[property] : `La propiedad ${property} no existe`
+//     }
+// }
 
-const proxyLibro = new Proxy (libro, objetoQueEnvuelveHandler)
+// const proxyLibro = new Proxy (libro, objetoQueEnvuelveHandler)
 
-console.log(proxyLibro.autor)
-console.log(proxyLibro.nombre)
+// console.log(proxyLibro.autor)
+// console.log(proxyLibro.nombre)
+
+
+//set
+//   Ejercicio 2: Validar y controlar las asignaciones de propiedades
+
+// Consigna: Crea un objeto usuario con propiedades nombre y edad. Utiliza un Proxy para validar que la propiedad edad solo acepte valores numéricos y mayores de 18. Si el valor no cumple con estas condiciones, debe lanzar un error.
+
+
+//get
+// Ejercicio 3: Registro de accesos a las propiedades
+// Consigna: Crea un objeto producto con propiedades nombre, precio, y stock. Utiliza un Proxy para registrar en la consola cada vez que se accede a una propiedad del objeto.
