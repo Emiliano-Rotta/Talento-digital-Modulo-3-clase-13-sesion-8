@@ -137,4 +137,66 @@
 
 // console.log(Object.getOwnPropertySymbols(usuario)); 
 
+//----------------------------------------------------
 
+//Proxy: es un objeto que envuelve a otro objeto 
+
+// target: El objeto original que el Proxy va a envolver.
+// handler: Un objeto que define qué operaciones deseas interceptar y cómo deseas manejarlas.
+
+// Operaciones comunes que se pueden interceptar con un Proxy:
+
+//get
+//set
+//has
+//delete
+//apply
+
+
+// const persona = {  //este seria el target
+//     nombre: "Juan",
+//     edad: 30
+// }
+// const auto = {  //este seria el target
+//     modelo: "Clio",
+//     año: 2007
+// }
+
+
+// const handler = {  //handler no es palabra reservada
+//     get(target, property){
+//         if(property in target){
+//             return target[property]
+//         } else {
+//             return `La propiedad ${property} no existe`
+//         }
+//     }
+// }
+
+// const proxyPersona = new Proxy(persona, handler)
+// const proxyAuto= new Proxy(auto, handler)
+// console.log(proxyAuto.modelo)
+
+// console.log(proxyPersona.ciudad)
+// console.log(proxyPersona.edad)
+
+
+// Ejercicio 1: Interceptar acceso a propiedades inexistentes
+
+// Consigna: Crea un objeto libro con las propiedades titulo y autor. Utiliza un Proxy para interceptar el acceso a propiedades que no existen en el objeto y devuelve un mensaje personalizado cuando esto ocurra.
+
+const libro = {
+    titulo: "Perelandra",
+    autor: "C.S.Lewis"
+}
+
+const objetoQueEnvuelveHandler = {
+    get(target, property){
+        return property in target ? target[property] : `La propiedad ${property} no existe`
+    }
+}
+
+const proxyLibro = new Proxy (libro, objetoQueEnvuelveHandler)
+
+console.log(proxyLibro.autor)
+console.log(proxyLibro.nombre)
