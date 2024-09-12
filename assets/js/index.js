@@ -55,34 +55,34 @@
 // const red = "rojo"
 // const apple = "rojo"
 
-const green = Symbol("verde")
-const yellow = Symbol("amarillo")
-const red = Symbol("rojo")
-const apple = Symbol("rojo")
+// const green = Symbol("verde")
+// const yellow = Symbol("amarillo")
+// const red = Symbol("rojo")
+// const apple = Symbol("rojo")
 
-// console.log(red === apple)
+// // console.log(red === apple)
 
-function semasforo(color) {
-    switch (color) {
-        case red:
-            return "Frenaaaaaaa!!"
-            break;
-        case yellow:
-            return "cuidado"
-            break;
-        case green:
-            return "avanza"
-            break;
-        default:
-            return "Eso no es un color"
-            break;
-    }
-}
+// function semasforo(color) {
+//     switch (color) {
+//         case red:
+//             return "Frenaaaaaaa!!"
+//             break;
+//         case yellow:
+//             return "cuidado"
+//             break;
+//         case green:
+//             return "avanza"
+//             break;
+//         default:
+//             return "Eso no es un color"
+//             break;
+//     }
+// }
 
-console.log(semasforo(red))
-console.log(semasforo(yellow))
-console.log(semasforo(green))
-console.log(semasforo(apple))
+// console.log(semasforo(red))
+// console.log(semasforo(yellow))
+// console.log(semasforo(green))
+// console.log(semasforo(apple))
 
 
 // Ejercicio 1: Propiedades privadas con Symbol
@@ -90,7 +90,20 @@ console.log(semasforo(apple))
 
 // Crea un objeto auto que tenga las propiedades marca, modelo y una propiedad privada llamada númeroDeSerie usando un Symbol. Luego, escribe un código que imprima solo la marca y el modelo del auto, sin revelar el número de serie. Finalmente, muestra cómo acceder al número de serie utilizando el Symbol.
 
-//ayuda: const numeroDeSerie = Symbol('númeroDeSerie');
+// const numeroDeSerie = Symbol('númeroDeSerie');
+
+// const auto = {
+//     marca: "Renault",
+//     modelo: "Clio",
+//     [numeroDeSerie]: "A125B14"
+// }
+
+// // for (const key in auto) {
+// //     console.log(key)
+// // }
+
+// // console.log(`La Marca es ${auto.marca} y el modelo es: ${auto.modelo}`)
+// console.log(`Número de serie es: ${auto[numeroDeSerie]}`)
 
 
 
@@ -107,9 +120,21 @@ console.log(semasforo(apple))
 // Verificar que las propiedades son únicas y no colisionan.
 
 // un programador mod 1 -->
-// un programador mod 2 -->
+// const simboloModuloUno = Symbol('propiedadModuloUno');
 
 // const usuario = {
-//     nombre: "Ghiselle"
-
+//     nombre: "Ghiselle",
+//     [simboloModuloUno]: "valor de Módulo 1"
 // }
+
+// // un programador mod 2 -->
+// const simboloModuloDos = Symbol('propiedadModuloDos');
+// usuario[simboloModuloDos] = "valor de Módulo 1"
+
+// for (const key in usuario) {
+//     console.log(key)
+// }
+
+// console.log(Object.getOwnPropertySymbols(usuario)); 
+
+
